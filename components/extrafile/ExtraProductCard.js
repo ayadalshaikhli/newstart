@@ -5,7 +5,7 @@ import { formatter } from "../../utils/helpers";
 
 import { getAllProducts, getProduct } from "../../lib/shopify";
 import { ExtraProductPageContent } from "./ExtraProductPageContent";
-export default function ExtraProductCard({ product, prohand }) {
+export default function ExtraProductCard({ product }) {
   const { handle, title } = product.node;
   const { altText, originalSrc } = product.node.images.edges[0].node;
   const price = product.node.priceRange.minVariantPrice.amount;

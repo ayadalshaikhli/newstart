@@ -8,7 +8,14 @@ export default function ExtraProductOptions({
 }) {
   return (
     <fieldset>
-      <legend className="text-xl font-semibold">{name}</legend>
+      <legend
+        onClick={() => {
+          alert(values);
+        }}
+        className="text-xl font-semibold"
+      >
+        {name}
+      </legend>
       <div className="inline-flex item-center flex-wrap">
         {values.map((value) => {
           const id = `option-${name}-${value.value}`;
